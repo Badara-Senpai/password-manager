@@ -34,3 +34,5 @@
 !/app/assets/builds/.keep
 
 /.idea
+
+/config/credentials/development.key
