@@ -8,7 +8,7 @@ class SharesController < ApplicationController
   end
 
   def create
-    @user_password = @password.user_password.new(user_password_params)
+    @user_password = @password.user_passwords.new(user_password_params)
     if @user_password.save
       redirect_to @password
     else
