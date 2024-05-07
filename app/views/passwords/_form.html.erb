@@ -24,7 +24,10 @@
 
   <div>
     <%= form.submit %>
-    <%= button_tag "Delete", form: "delete_password" %>
+
+    <% unless @password.new_record? %>
+      <%= button_tag "Delete", form: "delete_password" if user_password.deletable? %>
+    <% end %>
   </div>
 <% end %>
 
