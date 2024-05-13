@@ -18,7 +18,7 @@ class SharesController < ApplicationController
   end
 
   def destroy
-    @password.user_passwords.where(user_id: params[:id].destroy_all)
+    @password.user_passwords.where(user_id: params[:id]).destroy_all
     redirect_to @password
   end
 
